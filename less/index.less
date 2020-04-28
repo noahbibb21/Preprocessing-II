@@ -1,1 +1,57 @@
 // Follow the order in the readme
+@import "variables";
+@import "mixins"; 
+@import "reset";
+@import "global";
+@import "navigation";
+@import "footer";
+@import "home-page";
+
+header{
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    border-bottom: 4px dashed @navigation-border;
+    div{
+        display: flex;
+        justify-content: space-between; 
+        nav{
+            display:flex;
+            align-items: center;
+            a{
+                text-decoration: none;
+                color: @font-color;
+                padding: 1rem;
+                font-size: 1.5rem;
+                border-radius: .25rem;
+                &:hover{
+                    background: @button-bg;
+
+                }
+            }
+        }
+    }
+}
+@media @phone{
+    header{
+        height: auto;
+        div{
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            nav{
+                font-size: 3rem;
+                p{
+                    font-size: 15px;
+                    .first{
+                        font-size: 9px;
+                        .content-section{
+                            display: flex;
+                            flex-direction: column;
+                        }
+                    }    
+                }
+            }
+        }
+    }
+}
